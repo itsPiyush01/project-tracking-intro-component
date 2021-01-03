@@ -1,0 +1,80 @@
+:root {
+  /* 
+:root pseudo class
+same as html selector but with higher specificity
+just like global parent element
+*/
+
+  // COLOR VARIABLES
+
+  // - Red: hsl(0, 100%, 68%)
+
+  /* 
+  
+- Very Dark Blue: hsl(230, 29%, 20%)
+- Dark Grayish Blue: hsl(230, 11%, 40%)
+- Grayish Blue: hsl(231, 7%, 65%)
+- Light Grayish Blue: hsl(207, 33%, 95%) */
+
+  --color-primary: hsl(0, 100%, 68%);
+
+  --color-blue-dark-1: hsl(230, 29%, 20%);
+  --color-blue-dark-2: hsl(230, 11%, 40%);
+  --color-blue-dark-3: hsl(231, 7%, 65%);
+
+  --color-blue-light-1: hsl(207, 33%, 95%);
+}
+// FONT VARIABLE
+$font-primary: "Barlow", sans-serif;
+$font-display: "Barlow Condensed", sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 81.25em; //1300px/16px= 81.25em
+$bp-large: 68.75em; //1100px/16px= 62.5em
+$bp-medium: 50em; //800px/16px= 50em
+$bp-small: 37.5em; //600px/16px= 37.5em
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-largest) {
+    // font-size: 55%;
+  }
+  @media only screen and (max-width: $bp-large) {
+    // font-size: 55%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  color: var(--color-blue-dark-2);
+  background: white;
+  position: relative;
+  height: 100vh;
+
+  .container {
+    height: 50vh;
+    background: var(--color-blue-light-1);
+    border-bottom-left-radius: 5rem;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    z-index: -100;
+    @media only screen and (max-width: $bp-large) {
+      height: 70vh;
+    }
+  }
+}
