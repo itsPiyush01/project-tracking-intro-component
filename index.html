@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="#./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Project tracking intro component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style> -->
+  </head>
+  <body>
+    <div class="container"></div>
+
+    <header class="header">
+      <img class="logo" src="./images/logo.svg" alt="Logo" srcset="" />
+
+      <a class="nav__btn-link" href="#popup" onclick="myFunction()">
+        <img
+          class="nav__btn nav__btn-hamburger"
+          alt="icon-hamburger"
+          src="images/icon-hamburger.svg"
+          id="icon-hamburger"
+        />
+        <img
+          class="nav__btn nav__btn-close inactive"
+          alt="icon-close"
+          src="images/icon-close.svg"
+          id="icon-close"
+        />
+      </a>
+
+      <ul class="nav" id="nav">
+        <li class="nav__item"><a class="nav__link" href="#">Product</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Features</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Pricing</a></li>
+        <li class="nav__item">
+          <a class="nav__link nav__link-login" href="#">Login</a>
+        </li>
+      </ul>
+
+      <!-- <img
+        class=" nav__btn nav__btn-close"
+        alt="icon-close"
+        src="images/icon-close.svg"
+      /> -->
+    </header>
+
+    <section class="section__main">
+      <div class="section__main-content">
+        <h3 class="heading heading-tertiary">
+          <span>New</span> Monograph Dashboard
+        </h3>
+        <h1 class="heading heading-primary">
+          Powerful insights
+          <br />
+          into your team
+        </h1>
+        <h2 class="heading heading-secondary">
+          Project planning and time tracking <br />for agile teams
+        </h2>
+
+        <button class="preview preview__btn btn">Schedule a demo</button>
+        <p class="preview preview__content">To see a preview</p>
+      </div>
+
+      <div class="section__main-img">
+        <img
+          class="section__main-img"
+          src="images/illustration-devices.svg"
+          alt="devices image"
+        />
+      </div>
+
+      <!-- <div class="main__content">
+       
+        
+      </div>
+
+      <div class="main__img">
+      
+      </div> -->
+    </section>
+
+    <!-- <li></li> -->
+
+    <!--     
+    New Monograph Dashboard Powerful insights
+    into your team Project planning and time tracking for agile teams Schedule a
+    demo to see a live preview -->
+
+    <!-- <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="#https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="##">Your Name Here</a>.
+      </p>
+    </footer> -->
+  </body>
+
+  <script>
+    function myFunction() {
+      console.log("hello");
+
+      var icon_close = document.getElementById("icon-close");
+      var icon_hamburger = document.getElementById("icon-hamburger");
+      var nav = document.getElementById("nav");
+
+      icon_close.classList.toggle("inactive");
+      icon_hamburger.classList.toggle("inactive");
+      nav.classList.toggle("active");
+    }
+  </script>
+</html>
